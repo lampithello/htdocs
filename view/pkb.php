@@ -93,7 +93,7 @@ if ($result->num_rows > 0) {
         // Genera un ID univoco per il bottone e il modal
         $unique_id = 'modal' . $row['id'];
 ?>
-        <div class="col-lg-3  d-flex p-5">
+        <div class="col-lg-5  d-flex p-5">
             <div class="card flex-column h-100">
                 <div class="card-body">
                     <h5 class="card-title"><?php echo htmlspecialchars($row['nome']); ?></h5>
