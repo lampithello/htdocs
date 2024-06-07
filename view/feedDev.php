@@ -1,33 +1,8 @@
 <?php
+
 session_start();
-include '../control/conn.php';
-// Verifica se l'utente è loggato
-if (!isset($_SESSION['email'])) { // Verifica l'email anziché l'username
-    echo 'Accesso non autorizzato!';
-    exit();
-}
-
-$conn = new mysqli("localhost", "root", "", "test");
-if ($conn->connect_errno) {
-    printf("<h1>Connessione al server Mysql fallita: %s</h1>", $conn->connect_error);
-    exit();
-}
-
-$email = $_SESSION['email'];
-
-// Utilizzare una query preparata
-$stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
-$stmt->bind_param("s", $email);
-$stmt->execute();
-$result = $stmt->get_result();
-
-if ($result->num_rows > 0) {
-    $user = $result->fetch_assoc();
-} else {
-    echo "Nessun utente trovato";
-    exit();
-}
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -53,8 +28,8 @@ if ($result->num_rows > 0) {
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="pkb.php">PKB table</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">Area Feedback</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">PKB table</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Feed SVILUPPATORI</a></li>
                 </ul>
                 <div>
                     <?php if (isset($_SESSION['username'])) : ?>
@@ -65,7 +40,7 @@ if ($result->num_rows > 0) {
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="index.php">Home</a></li>
-                                <li><a class="dropdown-item" href="../model/logout.php">Logout</a></li>
+                                <li><a class="dropdown-item" href="model/logout.php">Logout</a></li>
                             </ul>
                         </div>
                     <?php else : ?>
@@ -81,18 +56,6 @@ if ($result->num_rows > 0) {
 
         </div>
     </nav>
-    <!-- Qui mostri i dati dell'utente -->
-    <div class="container">
-        <h1>Profilo di <?php echo htmlspecialchars($user['name']); ?></h1>
-        <p>Nome: <?php echo htmlspecialchars($user['name']); ?></p>
-        <p>Cognome: <?php echo htmlspecialchars($user['surname']); ?></p>
-        <p>Email: <?php echo htmlspecialchars($user['email']); ?></p>
-
-        <form action="../model/deleteAccount.php" method="POST">
-            <input type="hidden" name="email" value="<?php echo htmlspecialchars($user['email']); ?>">
-            <button type="submit" class="btn btn-danger">Elimina account</button>
-        </form>
-    </div>
 
 
 

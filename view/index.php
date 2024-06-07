@@ -25,12 +25,41 @@ session_start();
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="index.php">Homepage</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="pkb.php">PKB table</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">Area Feedback</a></li>
-                </ul>
+            <?php if (isset($_SESSION['email'])) : ?>
+                <!-- Se l'utente è loggato permette l'accesso alle pagine -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="pkb.php">PKB table</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../control/ruoli.php">Area Feedback</a></li>
+                    </ul>
                 <div>
+            <?php else : ?>
+                <!-- Se l'utente non è loggato mostra un pop up di errore -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#errorModal">PKB table</a></li>
+                        <li class="nav-item"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#errorModal">Area Feedback</a></li>
+                    </ul>
+                <div>
+            <?php endif; ?>
+                <!-- Error Modal -->
+                <div class="modal fade" id="errorModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Errore!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Non sei ancora loggato o registrato</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
                     <?php if (isset($_SESSION['username'])) : ?>
                         <!-- Se l'utente è loggato mostra il nome utente con profilo e azione di logout -->
                         <div class="btn-group">

@@ -1,11 +1,7 @@
 <?php
 session_start();
 include '../control/conn.php';
-// Verifica se l'utente è loggato
-if (!isset($_SESSION['email'])) { // Verifica l'email anziché l'username
-    echo 'Accesso non autorizzato!';
-    exit();
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +25,6 @@ if (!isset($_SESSION['email'])) { // Verifica l'email anziché l'username
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">PKB table</a></li>
-                <li class="nav-item"><a class="nav-link" href="#!">GDPR info</a></li>
                 <li class="nav-item"><a class="nav-link" href="#!">Area Feedback</a></li>
             </ul>
             <div>
