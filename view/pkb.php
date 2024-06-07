@@ -50,88 +50,115 @@ include '../control/conn.php';
 </nav>
 
 <body>
-    <?php
-   
-    // Verifica della connessione
-    if ($conn->connect_error) {
-        die("Connessione al database fallita: " . $conn->connect_error);
-    }
 
-    // Query per selezionare tutte le righe dalla tabella PKB
-    $sql = "SELECT * FROM pkb";
-    $result = $conn->query($sql);
-    echo '<div class="container">';
-    if ($result->num_rows > 0) {
-        echo '<div class="row">';
-        // Output dei dati in forma di card per ciascuna riga
-        while ($row = $result->fetch_assoc()) {
-            // Genera un ID univoco per il bottone e il modal
-            $unique_id = 'modal' . $row['id'];
-    ?>
-            <div class="col-lg-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo $row['nome']; ?></h5>
-                        <p class="card-text"><?php echo substr($row['descrizione'],0,100); ?>...</p>
-                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#<?php echo $unique_id; ?>">More Info</button>
-                        <!-- Aggiungi qui il codice per il modal -->
-                        <div class="modal fade" id="<?php echo $unique_id; ?>" tabindex="-1" aria-labelledby="exampleModalLabel<?php echo $unique_id; ?>" aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel<?php echo $unique_id; ?>">Modal Title</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <!-- Contenuto del modal -->
-                                        <h5 class="card-title"><?php echo $row['nome']; ?></h5>
-                                        <p class="card-text"><?php echo $row['descrizione']; ?></p>
-                                        <hr>
-                                        <h5 class="card-title">Context Pattern</h5>
-                                        <p class="card-text"><?php echo $row['context_pattern']; ?></p>
-                                        <hr>
-                                        <h5 class="card-title">Collocazione MVC</h5>
-                                        <p class="card-text"><?php echo $row['collocazione_mvc']; ?></p>
-                                        <hr>
-                                        <h5 class="card-title">ISO 9241-210 Phase</h5>
-                                        <p class="card-text"><?php echo $row['iso_9241_210_phase']; ?></p>
+<div class="container mt-4">
+    <form method="GET" action="">
+        <div class="row">
+            <div class="col-lg-4">
+                <select class="form-select" name="mvc_filter" id="mvc_filter">
+                    <option value="">Tutti</option>
+                    <option value="Model">Model</option>
+                    <option value="View">View</option>
+                    <option value="Controller">Controller</option>
+                </select>
+            </div>
+            <div class="col-lg-2">
+                <button type="submit" class="btn btn-primary">Filtra</button>
+            </div>
+        </div>
+    </form>
+</div>
+<?php
+// Verifica della connessione
+if ($conn->connect_error) {
+    die("Connessione al database fallita: " . $conn->connect_error);
+}
 
-                                        <hr>
-                                        <h5 class="card-title           ">GDPR</h5>
-                                        <p class="card-text"><?php echo $row['article_gdpr']; ?></p>
-                                        <hr>
-                                        <h5 class="card-title        ">Privacy by Design</h5>  
-                                        <p class="card-text"><?php echo $row['privacy_by_design']; ?></p>
-                                        <hr>
-                                        <h5 class="card-title     ">OWASP Top Ten</h5>
-                                        <p class="card-text"><?php echo $row['owasp_top_ten']; ?></p>
-                                        <hr>
-                                        <h5 class="card-title   ">CWE Top 25</h5>
-                                        <p class="card-text"><?php echo $row['cwe_top_25']; ?></p>
-                                        <hr>
-                                        <h5 class="card-title       ">Esempi</h5>
-                                        <p class="card-text"><?php echo $row['esempi']; ?></p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    </div>
+// Recupera il filtro selezionato dall'utente
+$mvc_filter = isset($_GET['mvc_filter']) ? $_GET['mvc_filter'] : '';
+
+// Costruisci la query SQL in base al filtro
+$sql = "SELECT * FROM pkb";
+if (!empty($mvc_filter)) {
+    // Usa LIKE per cercare il filtro nei campi collocazione_mvc
+    $sql .= " WHERE collocazione_mvc LIKE '%" . $conn->real_escape_string($mvc_filter) . "%'";
+}
+
+$result = $conn->query($sql);
+echo '<div class="container">';
+if ($result->num_rows > 0) {
+    echo '<div class="row">';
+    // Output dei dati in forma di card per ciascuna riga
+    while ($row = $result->fetch_assoc()) {
+        // Genera un ID univoco per il bottone e il modal
+        $unique_id = 'modal' . $row['id'];
+?>
+        <div class="col-lg-3  d-flex p-5">
+            <div class="card flex-column h-100">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo htmlspecialchars($row['nome']); ?></h5>
+                    <p class="card-text"><?php echo substr(htmlspecialchars($row['descrizione']), 0, 100); ?>...</p>
+                    <button class="btn btn-primary  position-absolute bottom-3 start-3" type="button" data-bs-toggle="modal" data-bs-target="#<?php echo $unique_id; ?>">More Info</button>
+                    <!-- Aggiungi qui il codice per il modal -->
+                    <div class="modal fade" id="<?php echo $unique_id; ?>" tabindex="-1" aria-labelledby="exampleModalLabel<?php echo $unique_id; ?>" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel<?php echo $unique_id; ?>">Modal Title</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Contenuto del modal -->
+                                    <h5 class="card-title"><?php echo htmlspecialchars($row['nome']); ?></h5>
+                                    <p class="card-text"><?php echo htmlspecialchars($row['descrizione']); ?></p>
+                                    <hr>
+                                    <h5 class="card-title">Context Pattern</h5>
+                                    <p class="card-text"><?php echo htmlspecialchars($row['context_pattern']); ?></p>
+                                    <hr>
+                                    <h5 class="card-title">Collocazione MVC</h5>
+                                    <p class="card-text"><?php echo htmlspecialchars($row['collocazione_mvc']); ?></p>
+                                    <hr>
+                                    <h5 class="card-title">ISO 9241-210 Phase</h5>
+                                    <p class="card-text"><?php echo htmlspecialchars($row['iso_9241_210_phase']); ?></p>
+
+                                    <hr>
+                                    <h5 class="card-title">GDPR</h5>
+                                    <p class="card-text"><?php echo htmlspecialchars($row['article_gdpr']); ?></p>
+                                    <hr>
+                                    <h5 class="card-title">Privacy by Design</h5>  
+                                    <p class="card-text"><?php echo htmlspecialchars($row['privacy_by_design']); ?></p>
+                                    <hr>
+                                    <h5 class="card-title">OWASP Top Ten</h5>
+                                    <p class="card-text"><?php echo htmlspecialchars($row['owasp_top_ten']); ?></p>
+                                    <hr>
+                                    <h5 class="card-title">CWE Top 25</h5>
+                                    <p class="card-text"><?php echo htmlspecialchars($row['cwe_top_25']); ?></p>
+                                    <hr>
+                                    <h5 class="card-title">Esempi</h5>
+                                    <p class="card-text"><?php echo htmlspecialchars($row['esempi']); ?></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </div>
-                        <!-- Aggiungi qui gli altri campi della tabella come necessario -->
                     </div>
+                    <!-- Aggiungi qui gli altri campi della tabella come necessario -->
                 </div>
             </div>
-    <?php
-        }
-        echo '</div>'; // Chiudi il div della riga
-    } else {
-        echo "Nessun risultato trovato nella tabella PKB";
+        </div>
+<?php
     }
+    echo '</div>'; // Chiudi il div della riga
+} else {
+    echo "Nessun risultato trovato nella tabella PKB";
+}
 
-    $conn->close();
-    echo '</div>'; // Chiudi il div del container
-    ?>
+$conn->close();
+echo '</div>'; // Chiudi il div del container
+?>
+
+
     <footer class="py-5 bg-dark">
         <div class="container">
             <p class="m-0 text-center text-white"></p>
@@ -152,4 +179,4 @@ article_gdpr
 privacy_by_design	
 owasp_top_ten	
 cwe_top_25	
-esempi --> -->
+esempi --> 

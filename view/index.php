@@ -157,17 +157,7 @@ session_start();
             </div>
         </div>
     </nav>
-    <!-- Header-->
-    <header class="bg-dark py-5">
-        <div class=" px-2 px-lg-5 my-5">
-            <div class="text-center text-white">
-                <div class="input-group">
-                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-                    <button type="button" class="btn btn-outline-primary" data-mdb-ripple-init>search</button>
-                </div>
-            </div>
-        </div>
-    </header>
+    
     <?php if (isset($_SESSION['username'])) : ?>
         <!-- Se l'utente è loggato, notifica l'avvenuto login con un banner -->
         <div class="alert alert-success" role="alert">
@@ -266,42 +256,7 @@ session_start();
                         </div>
                     </div>
                 </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Sale badge-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem"></div>
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder"></h5>
-                                <!-- Product price-->
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4"></div>
-                        <div class="text-center">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder"></h5>
-                            <!-- Product price-->
-                        </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent"></div>
-                    <div class="text-center"></div>
-                </div>
+                
             </div>
         </div>
 
