@@ -87,6 +87,9 @@ if ($result->num_rows > 0) {
         <p>Nome: <?php echo htmlspecialchars($user['name']); ?></p>
         <p>Cognome: <?php echo htmlspecialchars($user['surname']); ?></p>
         <p>Email: <?php echo htmlspecialchars($user['email']); ?></p>
+        <p>Genere: <?php echo htmlspecialchars($user['gender']); ?></p>
+        <p>Ruolo <?php echo htmlspecialchars($user['role']); ?></p>
+        
 
         <form action="../model/deleteAccount.php" method="POST">
             <input type="hidden" name="email" value="<?php echo htmlspecialchars($user['email']); ?>">
