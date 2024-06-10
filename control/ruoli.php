@@ -25,10 +25,9 @@ if ($result->num_rows > 0) {
     // Controlla il ruolo dell'utente e reindirizza di conseguenza
     if ($role == 'user') {
         header('Location: ../view/feedUser.php');
-    } elseif ($role == 'developer') {
+    } elseif ($role == 'developer' || $role == 'engineer') {
         header('Location: ../view/feedDev.php');
     } else {
-        // Gestisci il caso in cui il ruolo non sia né 'user' né 'developer'
         echo "Ruolo non riconosciuto.";
     }
 } else {
