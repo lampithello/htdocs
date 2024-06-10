@@ -28,8 +28,8 @@ session_start();
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">PKB table</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">Feed UTENTI</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="pkb.php">PKB table</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedUser.php">Feed UTENTI</a></li>
                 </ul>
                 <div>
                     <?php if (isset($_SESSION['username'])) : ?>
@@ -56,9 +56,23 @@ session_start();
 
         </div>
     </nav>
-
-
-
+    <!-- Section-->    
+    <section class="py-5">
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Benvenuto nell'area feedback</h4>
+            <hr>
+            <p class="mb-0">In questa pagina potrai inviare un qualsiasi feedback sull'applicazione e sulle norme di sicurezza presenti all'interno, con suggerimenti su eventuali norme da aggiungere o migliorie nella gestione delle pagine</p>
+        </div>
+        <form action="../model/feedWrite.php" method="POST">
+            <div class="mb-3">
+                <label for="textarea" class="form-label">Inserisci il tuo feedback</label>
+                <textarea class="form-control" name="textArea" id="textarea" rows="3" required></textarea>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-primary" type="submit">Invia</button>
+            </div>
+        </form>
+    </section>                    
     <!-- Footer-->
     <footer class="py-5 bg-dark">
         <div class="container">

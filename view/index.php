@@ -4,12 +4,13 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-<meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
     <title>Project X wiki</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -54,7 +55,7 @@ session_start();
                             <p>Non sei ancora loggato o registrato</p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                         </div>
                         </div>
                     </div>
@@ -161,7 +162,7 @@ session_start();
     <?php if (isset($_SESSION['username'])) : ?>
         <!-- Se l'utente è loggato, notifica l'avvenuto login con un banner -->
         <div class="alert alert-success" role="alert">
-            <strong>Utente loggato con successo, benvenuto <?php echo $_SESSION['username'] ?></strong>
+            <strong>Utente loggato con successo, benvenuto\a <?php echo $_SESSION['username'] ?></strong>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     <?php else : ?>
