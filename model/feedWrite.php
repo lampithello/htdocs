@@ -25,6 +25,5 @@ header("Location: ../view/index.php");
 exit();
 
 // Chiudi la dichiarazione e la connessione
-$stmt->close();
 $conn->close();
 ?>
