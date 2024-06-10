@@ -35,10 +35,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (confronto_credenziali($log_psw, $user['password'])) {
             inizio_sessione($log_email, $user['name']);
         } else {
-            echo 'Email o password errati!';
+            header('Location: ../view/index.php');
         }
     } else {
-        echo 'Email o password errati!';
+        header('Location: ../view/index.php');
     }
 }
 ?>
