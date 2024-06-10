@@ -1,6 +1,8 @@
 <?php
 
 session_start();
+include '../control/conn.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +59,65 @@ session_start();
         </div>
     </nav>
 
+    <body>
+        <?php
+        // Verifica della connessione
+        if ($conn->connect_error) {
+            die("Connessione al database fallita: " . $conn->connect_error);
+        }
 
+        // Costruisci la query SQL
+        $sql = "SELECT * FROM feedtable";
+
+        $result = $conn->query($sql);
+        echo '<div class="container">';
+        if ($result->num_rows > 0) {
+            echo '<div class="row">';
+            // Output dei dati in forma di card per ciascuna riga
+            while ($row = $result->fetch_assoc()) {
+                // Genera un ID univoco per il bottone e il modal
+                $unique_id = 'modal' . $row['id'];
+        ?>
+                <div class="col-lg-5  d-flex p-5">
+                    <div class="card flex-column h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo htmlspecialchars($row['name']); ?></h5>
+                            <p class="card-text"><?php echo substr(htmlspecialchars($row['feedback']), 0, 100); ?>...</p>
+                            <button class="btn btn-primary  position-absolute bottom-3 start-3" type="button" data-bs-toggle="modal" data-bs-target="#<?php echo $unique_id; ?>">Read more</button>
+                            <!-- Aggiungi qui il codice per il modal -->
+                            <div class="modal fade" id="<?php echo $unique_id; ?>" tabindex="-1" aria-labelledby="exampleModalLabel<?php echo $unique_id; ?>" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel<?php echo $unique_id; ?>">Modal Title</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- Contenuto del modal -->
+                                            <h5 class="card-title"><?php echo htmlspecialchars($row['name']); ?></h5>
+                                            <p class="card-text"><?php echo htmlspecialchars($row['feedback']); ?></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Aggiungi qui gli altri campi della tabella come necessario -->
+                        </div>
+                    </div>
+                </div>
+        <?php
+            }
+            echo '</div>'; // Chiudi il div della riga
+        } else {
+            echo "Nessun risultato trovato nella tabella PKB";
+        }
+
+        $conn->close();
+        echo '</div>'; // Chiudi il div del container
+        ?>
+    </body>
 
     <!-- Footer-->
     <footer class="py-5 bg-dark">
