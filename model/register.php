@@ -1,6 +1,6 @@
 <?php
 
-include '../control/conn.php';
+include_once '../control/conn.php';
 
 function password_criptata($password) {
     return password_hash($password, PASSWORD_DEFAULT);
@@ -29,7 +29,7 @@ function query_insert($conn, $name, $surname, $gender, $email, $password, $role)
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    var_dump($_POST); // Verifica se il form è stato inviato correttamente
+    // var_dump($_POST); // Verifica se il form è stato inviato correttamente
 
     $name = $_POST['name'];
     $surname = $_POST['surname'];

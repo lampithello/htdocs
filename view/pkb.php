@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../control/conn.php';
+include_once '../control/conn.php';
 
 ?>
 <!DOCTYPE html>
@@ -56,7 +56,6 @@ include '../control/conn.php';
         <div class="row">
             <div class="col-lg-4">
                 <select class="form-select" name="mvc_filter" id="mvc_filter">
-                    <option selected value="">Scelta</option>
                     <option value="">Tutti</option>
                     <option value="Model">Model</option>
                     <option value="View">View</option>

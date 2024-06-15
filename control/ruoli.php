@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'conn.php';
+include_once 'conn.php';
 
 // Ottieni lo username dalla sessione
 $username = $_SESSION['username'];

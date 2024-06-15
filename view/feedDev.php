@@ -1,12 +1,12 @@
 <?php
 
 session_start();
-include '../control/conn.php';
+include_once '../control/conn.php';
 
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="it" xml:lang="it">
 
 <head>
     <meta charset="utf-8" />
@@ -129,4 +129,4 @@ include '../control/conn.php';
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
-</html>
+</>

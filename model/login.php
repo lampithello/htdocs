@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../control/conn.php';
+include_once  '../control/conn.php';
 
 function query_select($conn, $email) {
     $stmt = $conn->prepare("SELECT email, password, name FROM users WHERE email = ?");

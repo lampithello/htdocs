@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../control/conn.php';
+include_once '../control/conn.php';
 // Verifica se l'utente è loggato
 if (!isset($_SESSION['email'])) { // Verifica l'email anziché l'username
     echo 'Accesso non autorizzato!';
@@ -29,7 +29,7 @@ if ($result->num_rows > 0) {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="it" xml:lang="it">
 
 <head>
     <meta charset="utf-8" />

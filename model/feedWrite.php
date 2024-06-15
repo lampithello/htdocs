@@ -1,7 +1,7 @@
 <?php
 session_start(); 
 
-include '../control/conn.php';
+include_once  '../control/conn.php';
 
 // Recupera lo username dalla sessione e il contenuto della textarea dal POST
 $name = $_SESSION['username'];
