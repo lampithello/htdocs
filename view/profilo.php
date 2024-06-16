@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once '../control/conn.php';
+
 // Verifica se l'utente è loggato
 if (!isset($_SESSION['email'])) { // Verifica l'email anziché l'username
     echo 'Accesso non autorizzato!';
@@ -28,6 +29,7 @@ if ($result->num_rows > 0) {
     exit();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="it" xml:lang="it">
 
@@ -50,7 +52,9 @@ if ($result->num_rows > 0) {
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="index.php">Homepage</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="pkb.php">PKB table</a></li>
@@ -58,27 +62,26 @@ if ($result->num_rows > 0) {
                 </ul>
                 <div>
                     <?php if (isset($_SESSION['username'])) : ?>
-                        <!-- Se l'utente è loggato mostra il nome utente con profilo e azione di logout -->
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                <?php echo htmlspecialchars($_SESSION['username']); ?>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="index.php">Home</a></li>
-                                <li><a class="dropdown-item" href="../model/logout.php">Logout</a></li>
-                            </ul>
-                        </div>
+                    <!-- Se l'utente è loggato mostra il nome utente con profilo e azione di logout -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <?php echo htmlspecialchars($_SESSION['username']); ?>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.php">Home</a></li>
+                            <li><a class="dropdown-item" href="../model/logout.php">Logout</a></li>
+                        </ul>
+                    </div>
                     <?php else : ?>
-                        <!-- Se l'utente non è loggato allora mostra i bottoni di registrazione e login -->
-                        <button class="btn btn-outline-dark mx-2" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
-                        <button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+                    <!-- Se l'utente non è loggato allora mostra i bottoni di registrazione e login -->
+                    <button class="btn btn-outline-dark mx-2" type="button" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Login</button>
+                    <button class="btn btn-outline-dark" type="button" data-bs-toggle="modal"
+                        data-bs-target="#registerModal">Register</button>
                     <?php endif; ?>
                 </div>
-
-
             </div>
-
-
         </div>
     </nav>
     <!-- Qui mostri i dati dell'utente -->
@@ -88,16 +91,12 @@ if ($result->num_rows > 0) {
         <p>Cognome: <?php echo htmlspecialchars($user['surname']); ?></p>
         <p>Email: <?php echo htmlspecialchars($user['email']); ?></p>
         <p>Genere: <?php echo htmlspecialchars($user['gender']); ?></p>
-        <p>Ruolo <?php echo htmlspecialchars($user['role']); ?></p>
-
-
+        <p>Ruolo: <?php echo htmlspecialchars($user['role']); ?></p>
         <form action="../model/deleteAccount.php" method="POST">
             <input type="hidden" name="email" value="<?php echo htmlspecialchars($user['email']); ?>">
             <button type="submit" class="btn btn-danger">Elimina account</button>
         </form>
     </div>
-
-
 
     <!-- Footer-->
     <footer class="py-5 bg-dark">
