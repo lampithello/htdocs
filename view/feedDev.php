@@ -126,7 +126,7 @@ include_once '../control/conn.php';
         </div>
     </footer>
     <!-- Il resto del tuo HTML va qui -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-8C+Zt5qFqFjY8YGHK4BjtGHv+Ue5Fg5p7nMewc+DA6g6Zl4X4x7+we5m5lFvtDbi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
