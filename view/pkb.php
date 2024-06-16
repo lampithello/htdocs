@@ -169,14 +169,3 @@ include_once '../control/conn.php';
 
 </html>
 
-
-<!-- nome	
-descrizione	
-context_pattern	
-collocazione_mvc	
-iso_9241_210_phase	
-article_gdpr	
-privacy_by_design	
-owasp_top_ten	
-cwe_top_25	
-esempi -->
