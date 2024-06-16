@@ -21,11 +21,11 @@ function confronto_credenziali($input_password, $stored_password) {
 function inizio_sessione($email, $name) {
     $_SESSION['email'] = $email; 
     $_SESSION['username'] = $name;
-    redirect('../view/index.php');
+    redirect_to_home();
 }
 
-function redirect($url) {
-    header('Location: ' . $url);
+function redirect_to_home() {
+    header('Location: ../view/index.php');
     exit();
 }
 
@@ -39,10 +39,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (confronto_credenziali($log_psw, $user['password'])) {
             inizio_sessione($log_email, $user['name']);
         } else {
-            redirect('../view/index.php');
+            redirect_to_home();
         }
     } else {
-        redirect('../view/index.php');
+        redirect_to_home();
     }
 }
-?>
