@@ -36,7 +36,7 @@ include_once '../control/conn.php';
                         </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="profilo.php">Profilo</a></li>
-                            <li><a class="dropdown-item" href="model/logout.php">Logout</a></li>
+                            <li><a class="dropdown-item" href="../model/logout.php">Logout</a></li>
                         </ul>
                     </div>
                 <?php else : ?>

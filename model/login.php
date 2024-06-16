@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once  '../control/conn.php';
+include_once '../control/conn.php';
 
 function query_select($conn, $email) {
     $stmt = $conn->prepare("SELECT email, password, name FROM users WHERE email = ?");
@@ -21,7 +21,11 @@ function confronto_credenziali($input_password, $stored_password) {
 function inizio_sessione($email, $name) {
     $_SESSION['email'] = $email; 
     $_SESSION['username'] = $name;
-    header('Location: ../view/index.php');
+    redirect('../view/index.php');
+}
+
+function redirect($url) {
+    header('Location: ' . $url);
     exit();
 }
 
@@ -35,9 +39,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (confronto_credenziali($log_psw, $user['password'])) {
             inizio_sessione($log_email, $user['name']);
         } else {
-            header('Location: ../view/index.php');
+            redirect('../view/index.php');
         }
     } else {
-        header('Location: ../view/index.php');
+        redirect('../view/index.php');
     }
 }
+?>

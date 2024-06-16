@@ -38,7 +38,7 @@ session_start();
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="index.php">Home</a></li>
-                                <li><a class="dropdown-item" href="model/logout.php">Logout</a></li>
+                                <li><a class="dropdown-item" href="../model/logout.php">Logout</a></li>
                             </ul>
                         </div>
                     <?php else : ?>
