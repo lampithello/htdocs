@@ -1,6 +1,6 @@
 <?php
 
-function chiusura_sessione()
+function chiusuraSessione()
 {
     session_start();
     session_unset();
@@ -8,4 +8,4 @@ function chiusura_sessione()
     header("Location: ../view/index.php"); // Reindirizza l'utente nella homepage dopo il logout
     exit();
 }
-chiusura_sessione();
+chiusuraSessione();
