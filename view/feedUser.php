@@ -1,8 +1,6 @@
 <?php
-
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="it" xml:lang="it">
 
@@ -56,7 +54,7 @@ session_start();
 
         </div>
     </nav>
-    <!-- Section-->    
+    <!-- Section-->
     <section class="py-5">
         <div class="alert alert-success" role="alert">
             <h4 class="alert-heading">Benvenuto nell'area feedback</h4>
@@ -72,7 +70,7 @@ session_start();
                 <button class="btn btn-primary" type="submit">Invia</button>
             </div>
         </form>
-    </section>                    
+    </section>
     <!-- Footer-->
     <footer class="py-5 bg-dark">
         <div class="container">

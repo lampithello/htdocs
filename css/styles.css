@@ -183,7 +183,7 @@ address {
   line-height: inherit;
 }
 
-ol,
+
 ul {
   padding-left: 2rem;
 }
@@ -245,10 +245,6 @@ sup {
   top: -0.5em;
 }
 
-a {
-  color: var(--bs-link-color);
-  text-decoration: underline;
-}
 a:hover {
   color: var(--bs-link-hover-color);
 }
@@ -3392,9 +3388,7 @@ textarea.form-control-lg {
 .dropend .dropdown-toggle:empty::after {
   margin-left: 0;
 }
-.dropend .dropdown-toggle::after {
-  vertical-align: 0;
-}
+
 
 .dropstart .dropdown-menu[data-bs-popper] {
   top: 0;
@@ -3409,9 +3403,7 @@ textarea.form-control-lg {
   vertical-align: 0.255em;
   content: "";
 }
-.dropstart .dropdown-toggle::after {
-  display: none;
-}
+
 .dropstart .dropdown-toggle::before {
   display: inline-block;
   margin-right: 0.255em;
@@ -3424,9 +3416,7 @@ textarea.form-control-lg {
 .dropstart .dropdown-toggle:empty::after {
   margin-left: 0;
 }
-.dropstart .dropdown-toggle::before {
-  vertical-align: 0;
-}
+
 
 .dropdown-divider {
   height: 0;

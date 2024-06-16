@@ -1,10 +1,7 @@
 <?php
-
 session_start();
 include_once '../control/conn.php';
-
 ?>
-
 <!DOCTYPE html>
 <html lang="it" xml:lang="it">
 

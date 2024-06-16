@@ -38,4 +38,3 @@ if ($result->num_rows > 0) {
 // Chiudi la connessione al database
 $stmt->close();
 $conn->close();
-
