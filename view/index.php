@@ -182,14 +182,11 @@ session_start();
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder"></h5>
-                                <!-- Product price-->
+                                <h5 class="fw-bolder">Protection against Tracking
+                                </h5>
                             </div>
                         </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"></div>
-                        </div>
+                      
                     </div>
                 </div>
                 <div class="col mb-5">
@@ -202,17 +199,13 @@ session_start();
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder"></h5>
+                                <h5 class="fw-bolder">Data Breach Notification Pattern</h5>
                                 <!-- Product reviews-->
 
-                                <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through"></span>
+
                             </div>
                         </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"></div>
-                        </div>
+
                     </div>
                 </div>
                 <div class="col mb-5">
@@ -225,38 +218,32 @@ session_start();
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder"></h5>
-                                <!-- Product price-->
+                                <h5 class="fw-bolder">Strip Invisible Metadata
+                                </h5>
+
                             </div>
                         </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"></div>
-                        </div>
+
                     </div>
                 </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder"></h5>
-                                <!-- Product reviews-->
-
-                                <!-- Product price-->
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"></div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Minimal Information Asymmetry</h5>
+                           
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
         </div>
 
         </div>
