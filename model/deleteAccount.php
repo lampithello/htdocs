@@ -9,7 +9,7 @@ if (!isset($_POST['email'])) {
 
 $email = $_POST['email'];
 
-$conn = new mysqli("localhost", "root", "projectxing", "test");
+$conn = new mysqli("localhost", "root", "pjXiNgNfi", "test");
 if ($conn->connect_errno) {
     printf("<h1>Connessione al server Mysql fallita: %s</h1>", $conn->connect_error);
     exit();
