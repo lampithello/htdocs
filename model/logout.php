@@ -9,4 +9,3 @@ function chiusura_sessione()
     exit();
 }
 chiusura_sessione();
-?>

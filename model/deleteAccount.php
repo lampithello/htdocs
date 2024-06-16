@@ -25,4 +25,3 @@ if ($stmt->affected_rows > 0) {
 } else {
     echo "Errore durante l'eliminazione dell'account";
 }
-?>
