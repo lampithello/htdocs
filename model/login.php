@@ -19,7 +19,7 @@ function confrontoCredenziali($inputPassword, $storedPassword) {
 }
 
 function inizioSessione($email, $name) {
-    $_SESSION['email'] = $email; 
+    $_SESSION['email'] = $email;
     $_SESSION['username'] = $name;
     redirectToHome();
 }
@@ -45,3 +45,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         redirectToHome();
     }
 }
+?>
