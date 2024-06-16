@@ -18,6 +18,11 @@ $email = $_SESSION['email'];
 
 // Utilizzare una query preparata
 $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
+if (!$stmt) {
+    printf("Errore nella preparazione della query: %s", $conn->error);
+    exit();
+}
+
 $stmt->bind_param("s", $email);
 $stmt->execute();
 $result = $stmt->get_result();
