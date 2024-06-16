@@ -6,7 +6,7 @@ include_once '../control/conn.php';
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="it" xml:lang="it">
 
 <head>
     <meta charset="utf-8" />
