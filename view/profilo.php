@@ -89,7 +89,7 @@ if ($result->num_rows > 0) {
         <p>Email: <?php echo htmlspecialchars($user['email']); ?></p>
         <p>Genere: <?php echo htmlspecialchars($user['gender']); ?></p>
         <p>Ruolo <?php echo htmlspecialchars($user['role']); ?></p>
-        
+
 
         <form action="../model/deleteAccount.php" method="POST">
             <input type="hidden" name="email" value="<?php echo htmlspecialchars($user['email']); ?>">
@@ -106,7 +106,7 @@ if ($result->num_rows > 0) {
         </div>
     </footer>
     <!-- Il resto del tuo HTML va qui -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-8C+Zt5qFqFjY8YGHK4BjtGHv+Ue5Fg5p7nMewc+DA6g6Zl4X4x7+we5m5lFvtDbi" crossorigin="anonymous"></script>
 </body>
 
 </html>
