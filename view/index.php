@@ -171,7 +171,8 @@ session_start();
         </div>
     <?php endif; ?>
     <!-- Section-->
-    <section class="py-5">
+
+    <section class="py-6">
         <div class=" px-4 px-lg-5 mt-5">
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 <div class="col mb-5">
@@ -186,7 +187,7 @@ session_start();
                                 </h5>
                             </div>
                         </div>
-                      
+
                     </div>
                 </div>
                 <div class="col mb-5">
@@ -226,29 +227,29 @@ session_start();
 
                     </div>
                 </div>
-            </div>
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <!-- Product image-->
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">Minimal Information Asymmetry</h5>
-                           
-                        </div>
-                    </div>
-                    
-                </div>
+
+               
             </div>
 
         </div>
         </div>
+    </div>
+        </div>
+        </div>
 
-        </div>
-        </div>
+        <?php if (isset($_SESSION['email'])) : ?>
+            <!-- Mostra il pulsante se l'utente è loggato -->
+            <div class="d-flex justify-content-center align-items-center pb-3">
+                <button type="button"  class="btn btn-primary "><a class="text-white"href="pkb.php">Leggi di più</a></button>
+            </div>
+        <?php else : ?>
+            <!-- Mostra il pulsante con il modal se l'utente non è loggato -->
+            <div class="d-flex justify-content-center align-items-center pb-3">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#errorModal">Leggi di più</button>
+            </div>
+        <?php endif; ?>
     </section>
+
     <!-- Footer-->
     <footer class="py-5 bg-dark">
         <div class="container">
