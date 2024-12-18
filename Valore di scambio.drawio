@@ -99,17 +99,27 @@
         <mxCell id="P9O11vjehbu49Zwbc3OA-28" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.769;exitY=0.863;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.067;entryY=0.437;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BjfgniWRNUNUxX5SANr4-1" target="P9O11vjehbu49Zwbc3OA-27">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="P9O11vjehbu49Zwbc3OA-60" value="Pagamento utilizzo" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="P9O11vjehbu49Zwbc3OA-28">
+          <mxGeometry x="0.2114" y="1" relative="1" as="geometry">
+            <mxPoint x="56" y="76" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="P9O11vjehbu49Zwbc3OA-29" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.8;entryY=0.8;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="P9O11vjehbu49Zwbc3OA-27" target="BjfgniWRNUNUxX5SANr4-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="P9O11vjehbu49Zwbc3OA-59" value="Servizio di notifica email" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="P9O11vjehbu49Zwbc3OA-29">
+          <mxGeometry x="-0.269" y="-2" relative="1" as="geometry">
+            <mxPoint x="19" y="-25" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="P9O11vjehbu49Zwbc3OA-30" value="" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.nlp-sa_sentiment_analysis;" vertex="1" parent="1">
-          <mxGeometry x="610" y="700" width="47.400000000000006" height="47.400000000000006" as="geometry" />
+          <mxGeometry x="642.6" y="693" width="47.400000000000006" height="47.400000000000006" as="geometry" />
         </mxCell>
         <mxCell id="P9O11vjehbu49Zwbc3OA-34" value="Login" style="html=1;whiteSpace=wrap;strokeColor=none;fillColor=#0079D6;labelPosition=center;verticalLabelPosition=middle;verticalAlign=top;align=center;fontSize=12;outlineConnect=0;spacingTop=-6;fontColor=#FFFFFF;sketch=0;shape=mxgraph.sitemap.login;" vertex="1" parent="1">
           <mxGeometry x="370" y="710" width="70" height="60" as="geometry" />
         </mxCell>
         <mxCell id="P9O11vjehbu49Zwbc3OA-35" value="" style="strokeColor=#dddddd;shadow=1;strokeWidth=1;rounded=1;absoluteArcSize=1;arcSize=2;" vertex="1" parent="1">
-          <mxGeometry x="150" y="700" width="90" height="50" as="geometry" />
+          <mxGeometry x="138" y="702" width="103" height="48" as="geometry" />
         </mxCell>
         <mxCell id="P9O11vjehbu49Zwbc3OA-36" value="Google&#xa;Ads" style="sketch=0;dashed=0;connectable=0;html=1;fillColor=#5184F3;strokeColor=none;shape=mxgraph.gcp2.google_ads;part=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;spacingLeft=5;fontColor=#999999;fontSize=12;" vertex="1" parent="P9O11vjehbu49Zwbc3OA-35">
           <mxGeometry width="45" height="45" relative="1" as="geometry">
@@ -119,8 +129,18 @@
         <mxCell id="P9O11vjehbu49Zwbc3OA-37" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.673;entryY=0.917;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.081;exitY=-0.07;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="P9O11vjehbu49Zwbc3OA-30" target="BjfgniWRNUNUxX5SANr4-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="P9O11vjehbu49Zwbc3OA-62" value="Analisi report" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="P9O11vjehbu49Zwbc3OA-37">
+          <mxGeometry x="-0.64" y="-1" relative="1" as="geometry">
+            <mxPoint x="-25" y="13" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="P9O11vjehbu49Zwbc3OA-38" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.723;exitY=0.911;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.387;entryY=0.088;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BjfgniWRNUNUxX5SANr4-1" target="P9O11vjehbu49Zwbc3OA-30">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P9O11vjehbu49Zwbc3OA-63" value="Pagamento utilizzo" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="P9O11vjehbu49Zwbc3OA-38">
+          <mxGeometry x="0.1033" y="2" relative="1" as="geometry">
+            <mxPoint x="31" y="-6" as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="P9O11vjehbu49Zwbc3OA-39" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.55;entryY=0.95;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="P9O11vjehbu49Zwbc3OA-34" target="BjfgniWRNUNUxX5SANr4-1">
           <mxGeometry relative="1" as="geometry">
@@ -170,7 +190,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="P9O11vjehbu49Zwbc3OA-57" value=" Sistema di Analytics e Monitoraggio" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="523.7" y="750" width="220" height="30" as="geometry" />
+          <mxGeometry x="556.3000000000001" y="740" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P9O11vjehbu49Zwbc3OA-58" value="Sistema pubblicitario" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="118" y="748.5" width="143" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="P9O11vjehbu49Zwbc3OA-64" value="Servizio di Autenticazione Esterno (OAuth)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="288" y="770" width="253" height="33" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
