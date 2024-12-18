@@ -131,7 +131,7 @@
           <mxGeometry x="642.6" y="693" width="47.400000000000006" height="47.400000000000006" as="geometry" />
         </mxCell>
         <mxCell id="P9O11vjehbu49Zwbc3OA-34" value="Login" style="html=1;whiteSpace=wrap;strokeColor=none;fillColor=#0079D6;labelPosition=center;verticalLabelPosition=middle;verticalAlign=top;align=center;fontSize=12;outlineConnect=0;spacingTop=-6;fontColor=#FFFFFF;sketch=0;shape=mxgraph.sitemap.login;" vertex="1" parent="1">
-          <mxGeometry x="370" y="710" width="70" height="60" as="geometry" />
+          <mxGeometry x="385" y="710" width="70" height="60" as="geometry" />
         </mxCell>
         <mxCell id="P9O11vjehbu49Zwbc3OA-35" value="" style="strokeColor=#dddddd;shadow=1;strokeWidth=1;rounded=1;absoluteArcSize=1;arcSize=2;" vertex="1" parent="1">
           <mxGeometry x="88" y="716" width="103" height="48" as="geometry" />
