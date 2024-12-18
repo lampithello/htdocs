@@ -234,7 +234,7 @@
           <mxGeometry x="556.3000000000001" y="740.4" width="220" height="44" as="geometry" />
         </mxCell>
         <mxCell id="P9O11vjehbu49Zwbc3OA-58" value="Sistema pubblicitario&lt;br&gt;(Google Ads)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="118" y="750" width="143" height="44" as="geometry" />
+          <mxGeometry x="68" y="764" width="143" height="44" as="geometry" />
         </mxCell>
         <mxCell id="P9O11vjehbu49Zwbc3OA-64" value="Servizio di Autenticazione Esterno&lt;br&gt;(Google OAuth)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="309" y="770" width="209" height="44" as="geometry" />
