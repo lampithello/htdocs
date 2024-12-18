@@ -4,14 +4,17 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="BjfgniWRNUNUxX5SANr4-1" value="eApp" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="BjfgniWRNUNUxX5SANr4-1" value="eApp" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="380" y="320" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="BjfgniWRNUNUxX5SANr4-2" value="Studente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+        <mxCell id="BjfgniWRNUNUxX5SANr4-2" value="Studente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="170" y="460" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="BjfgniWRNUNUxX5SANr4-3" value="Gentiroe" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="260" y="530" width="30" height="60" as="geometry" />
+        <mxCell id="BjfgniWRNUNUxX5SANr4-3" value="Genitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="300" y="570" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P9O11vjehbu49Zwbc3OA-1" value="Tutor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="240" width="30" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
