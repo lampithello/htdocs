@@ -248,15 +248,15 @@
         <mxCell id="P9O11vjehbu49Zwbc3OA-74" value="Accesso lezione" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=13;" parent="1" vertex="1" connectable="0">
           <mxGeometry x="175.99784337301634" y="297.0049896640081" as="geometry" />
         </mxCell>
-        <mxCell id="zrePVELoqPu56qbrxv9v-1" value="Sistema videoconferenza&lt;br&gt;(Google Meet, Zoom)" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.video_conversation;" vertex="1" parent="1">
+        <mxCell id="zrePVELoqPu56qbrxv9v-1" value="Servizio riunione&lt;br&gt;(Google Meet, Zoom)" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.video_conversation;" vertex="1" parent="1">
           <mxGeometry x="556.3" y="44" width="66" height="31" as="geometry" />
         </mxCell>
         <mxCell id="zrePVELoqPu56qbrxv9v-2" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.588;entryY=0.179;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="zrePVELoqPu56qbrxv9v-1" target="BjfgniWRNUNUxX5SANr4-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="zrePVELoqPu56qbrxv9v-5" value="API Videoconferenza" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="zrePVELoqPu56qbrxv9v-2">
+        <mxCell id="zrePVELoqPu56qbrxv9v-5" value="Riunione sicura" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=13;" vertex="1" connectable="0" parent="zrePVELoqPu56qbrxv9v-2">
           <mxGeometry x="-0.1728" y="3" relative="1" as="geometry">
-            <mxPoint x="41" y="-9" as="offset" />
+            <mxPoint x="48" y="-35" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="zrePVELoqPu56qbrxv9v-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.137;entryY=1.013;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="zrePVELoqPu56qbrxv9v-1">
@@ -265,9 +265,9 @@
             <mxPoint x="550" y="103" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="zrePVELoqPu56qbrxv9v-4" value="Pagamento servizio" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="zrePVELoqPu56qbrxv9v-3">
+        <mxCell id="zrePVELoqPu56qbrxv9v-4" value="Pagamento servizio" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=13;" vertex="1" connectable="0" parent="zrePVELoqPu56qbrxv9v-3">
           <mxGeometry x="0.2226" y="1" relative="1" as="geometry">
-            <mxPoint x="-30" y="-32" as="offset" />
+            <mxPoint x="-59" y="19" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
